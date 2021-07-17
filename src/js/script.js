@@ -91,3 +91,52 @@ catalog.addEventListener("click", (e) => {
 		item.querySelector(".catalog-item__list").classList.toggle("catalog-item__list_active");
 	}
 });
+
+//=============================================================
+// Forms
+//=============================================================
+const consultationButtons = document.querySelectorAll("[data-modal=consultation]"),
+	modalConsultation = document.querySelector("#consultation"),
+	modals = document.querySelectorAll(".modal"),
+	modalOrder = document.querySelector("#order"),
+	modalThanks = document.querySelector("#thanks"),
+	overlay = document.querySelector(".overlay");
+
+function openModal(modal, itemName = "") {
+	if (modal.id === "order") {
+		modal.querySelector(".modal__descr").innerHTML = itemName;
+	}
+	overlay.style.display = "block";
+	modal.style.display = "block";
+}
+
+function closeModal() {
+	overlay.style.display = "none";
+	modals.forEach((modal) => {
+		modal.style.display = "none";
+	});
+}
+
+consultationButtons.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		openModal(modalConsultation);
+	});
+});
+
+overlay.addEventListener("click", (e) => {
+	const target = e.target;
+	console.log(target);
+	if (target && (target.classList.contains("overlay") || target.classList.contains("modal__close"))) {
+		closeModal();
+	}
+});
+
+catalog.addEventListener("click", (e) => {
+	const target = e.target;
+	if (target && target.classList.contains("button_mini")) {
+		e.preventDefault();
+		const itemName = target.parentNode.parentNode.querySelector(".catalog-item__subtitle").innerHTML;
+		openModal(modalOrder, itemName);
+	}
+});
