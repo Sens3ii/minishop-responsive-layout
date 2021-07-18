@@ -36,7 +36,7 @@ $mail->Body    = '
 	E-mail: ' . $email . '';
 
 if(!$mail->send()) {
-    return true; // в любом случае вернем успех(при продакшене исправить)
+    return false; 
 } else {
     return true;
 }
