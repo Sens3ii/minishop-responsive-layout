@@ -45,6 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	function showTabContent(i = 0) {
 		tabsContent[i].classList.add("catalog__content_active");
 		tabs[i].classList.add("catalog__tab_active");
+		animateContent(i);
 	}
 
 	hideTabContent();
@@ -130,7 +131,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	overlay.addEventListener("click", (e) => {
 		const target = e.target;
-		console.log(target);
 		if (target && (target.classList.contains("overlay") || target.classList.contains("modal__close"))) {
 			closeModal();
 		}
@@ -208,4 +208,16 @@ window.addEventListener("DOMContentLoaded", () => {
 		$("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
 		return false;
 	});
+	// For animations
+	new WOW().init();
+	// Animations for Items
+	function animateContent(i = 0) {
+		const items = tabsContent[i].querySelectorAll(".catalog-item");
+		items.forEach((item, j) => {
+			item.classList.remove("animate__", "animate__animated", "animate__pulse", "wow");
+			item.classList.add("animate__animated", "animate__pulse", "wow");
+			const delayStep = 100;
+			item.setAttribute("style", `animation-delay: ${delayStep * j}ms`);
+		});
+	}
 });
