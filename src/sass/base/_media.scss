@@ -1,0 +1,317 @@
+@media (max-width: 991px) {
+	.header {
+		padding: 0 15px;
+	}
+	.promo {
+		padding: 15px 0 84px 0;
+		&__wrapper {
+			align-items: center;
+			margin-top: 91px;
+		}
+	}
+	.button {
+		&_main {
+			margin-top: 65px;
+		}
+	}
+	.advantages {
+		padding: 66px 0 59px 0;
+		&__wrapper {
+			padding: 0 15px;
+		}
+		&__item {
+			max-width: 227px;
+		}
+	}
+	.consultation {
+		padding: 60px 0;
+		min-height: 600px;
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.title {
+			font-size: 32px;
+			line-height: 51px;
+			&_left {
+				text-align: center;
+			}
+		}
+		&__descr {
+			text-align: center;
+		}
+	}
+	.carousel {
+		padding: 75px 0;
+		.next,
+		.prev {
+			display: none;
+		}
+		img {
+			max-height: 280px;
+		}
+	}
+	.catalog {
+		padding-bottom: 60px;
+		&__content {
+			justify-content: space-around;
+		}
+		&-item {
+			&__descr {
+				font-size: 15px;
+			}
+		}
+	}
+	.feed {
+		&__item {
+			padding: 0 20px;
+		}
+		&__text {
+			text-align: justify;
+		}
+		&__descr {
+			font-size: 17px;
+		}
+	}
+	.modal {
+		&__close {
+			display: none;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.header {
+		&__official {
+			display: none;
+		}
+	}
+	.promo {
+		&__header {
+			font-weight: 700;
+			font-size: 40px;
+		}
+	}
+	.advantages {
+		display: flex;
+		&__wrapper {
+			padding: 0 15px;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+		&__item:last-child {
+			margin-top: 20px;
+		}
+		&__icon {
+			margin-bottom: 22px;
+		}
+	}
+	.consultation {
+		min-height: 500px;
+
+		padding: 65px 0;
+		.title {
+			font-size: 25px;
+			line-height: 46px;
+		}
+	}
+	.carousel {
+		padding: 75px 0;
+		.next,
+		.prev {
+			display: none;
+		}
+		img {
+			max-height: 280px;
+		}
+	}
+	.catalog {
+		padding-bottom: 60px;
+		&__tabs {
+			margin-top: 33px;
+		}
+		&__tab {
+			width: 175px;
+			font-size: 17px;
+		}
+		&__content {
+			justify-content: space-around;
+		}
+		&-item {
+			margin-bottom: 10px;
+			&__descr {
+				font-size: 15px;
+			}
+		}
+	}
+	.feed {
+		&__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			margin-top: 45px;
+		}
+		&__text {
+			text-align: center;
+			margin: 0;
+			padding: 0 20px;
+			margin-top: 10px;
+		}
+		&__descr {
+			font-size: 17px;
+		}
+	}
+	.title {
+		font-size: 31px;
+	}
+	.footer {
+		&__info {
+			width: 421px;
+			height: 246px;
+		}
+		&__phone {
+			margin-bottom: 25px;
+		}
+	}
+	.pageup {
+		bottom: 30px;
+		right: 30px;
+	}
+}
+
+@media (max-width: 575px) {
+	.header {
+		&__phone {
+			font-size: 14px;
+		}
+		&__logo {
+			width: 131px;
+			height: 24px;
+		}
+	}
+	.promo {
+		&__wrapper {
+			margin-top: 57px;
+		}
+		&__header {
+			text-align: center;
+			font-weight: 700;
+			font-size: 24px;
+		}
+		&__subheader {
+			text-align: center;
+			font-weight: 300;
+			font-size: 19px;
+			margin-top: 10px;
+		}
+		&__icons {
+			margin-top: 40px;
+		}
+		&__icons > div {
+			margin-bottom: 20px;
+		}
+	}
+	.button {
+		width: 138px;
+		height: 25px;
+		font-size: 11px;
+		&_main {
+			margin-top: 35px;
+			width: 191px;
+			height: 40px;
+		}
+		&_submit {
+			width: 100%;
+			height: 35px;
+		}
+		&_mini {
+			width: 140px;
+			height: 35px;
+			font-size: 13px;
+		}
+	}
+	.promo {
+		padding: 13px 0 60px 0;
+		&__icons {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+		&__link {
+			font-size: 15px;
+			color: #fff;
+			margin-top: 14px;
+		}
+	}
+	.title {
+		font-size: 23px;
+	}
+	.advantages {
+		padding: 40px 0;
+		&__wrapper {
+			margin-top: 30px;
+		}
+		&__item {
+			max-width: 280px;
+			margin-bottom: 15px;
+		}
+		&__icon {
+			margin-bottom: 10px;
+		}
+		&__subtitle {
+			margin-bottom: 12px;
+		}
+	}
+	.consultation {
+		min-height: 500px;
+		.title {
+			font-size: 21px;
+			line-height: 38px;
+		}
+		&__descr {
+			font-size: 18px;
+		}
+	}
+	.carousel {
+		padding: 30px 0;
+		img {
+			max-height: 280px;
+			width: 100%;
+		}
+	}
+	.catalog {
+		padding: 30px 0;
+		&__tabs {
+			margin-top: 25px;
+			flex-direction: column;
+		}
+		&__tab {
+			width: 200px;
+			margin-bottom: 10px;
+		}
+		&__content {
+			margin-top: 40px;
+		}
+		&-item {
+			&__list {
+				li {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.pageup {
+		bottom: 20px;
+		right: 20px;
+	}
+	.footer {
+		&__info {
+			width: 100%;
+			padding: 25px 25px;
+		}
+	}
+}
